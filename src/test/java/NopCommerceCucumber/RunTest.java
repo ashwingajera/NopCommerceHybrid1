@@ -6,7 +6,7 @@ import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features ="src\\test\\Resouces\\Features", tags = "@guestUserReferAProduct")
+@CucumberOptions(features ="src\\test\\Resouces\\Features", tags = "@categoryPage")
 
 public class RunTest {
 

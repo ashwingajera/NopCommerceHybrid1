@@ -5,7 +5,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class MystepDef {
+public class MystepDef extends Utils {
 
     HomePage homePage = new HomePage();
     RegistrationPage registrationPage = new RegistrationPage();
@@ -193,4 +193,24 @@ public class MystepDef {
         checkOutPage.continueToHomePage();
 
     }
+
+    @Given("^User on homepage$")
+    public void user_on_homepage()  {
+
+
+    }
+
+    @When("^User Click on \"([^\"]*)\" link from top menu$")
+    public void user_Click_on_link_from_top_menu(String category)  {
+        homePage.clickoncategorylocator(category);
+
+    }
+
+    @Then("^User should be able to navigate \"([^\"]*)\"  successfully$")
+    public void user_should_be_able_to_navigate_successfully(String related_category_page)  {
+        assertCurrentURL(related_category_page);
+
+
+    }
+
 }

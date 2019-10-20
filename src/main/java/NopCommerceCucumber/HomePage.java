@@ -32,8 +32,12 @@ public class HomePage extends Utils {
         //Go to book category
         clickOnElement(_clickOnBookCategoryButtonOnHomepage);
 
-
-
     }
+
+    public void clickoncategorylocator (String category){
+        clickOnElement(By.linkText(category));
+    }
+
+
 
 }

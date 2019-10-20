@@ -201,8 +201,10 @@ public class Utils extends BasePage{
     }
 
     public static void assertCurrentURL (String url){
-        Assert.assertTrue(driver.getCurrentUrl().equals(url));
+        Assert.assertEquals(driver.getCurrentUrl(),url);
     }
+
+
 
     public int randomNumber() {
         Random random = new Random();

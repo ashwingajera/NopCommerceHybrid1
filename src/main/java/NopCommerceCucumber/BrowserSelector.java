@@ -13,7 +13,8 @@ public class BrowserSelector extends Utils {
     public void setUpBrowser() {
 
         //storing browser as a string variable
-        String browser = loadProp.getProperty("browser");
+      // String browser = loadProp.getProperty("browser");
+       String browser = System.getProperty("browser");
 
         if (browser.equalsIgnoreCase("chrome")){
             System.setProperty("webdriver.chrome.driver","src\\test\\Resouces\\BrowserDriver\\chromedriver.exe");
